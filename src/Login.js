@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Grid, Row, Col} from 'react-bootstrap';
+import { Grid, Row, Col, Button} from 'react-bootstrap';
 import './Login.css';
 
 class Login extends Component {
@@ -9,26 +9,17 @@ class Login extends Component {
             <Grid>
                 <Row>
                     <Col>
-                    <form action="action_page.php">
-                
-                        <div className="container">
-                            <label for="uname"><b>Username</b></label>
-                            <input type="text" placeholder="Enter Username" name="uname" required/>
-
-                            <label for="psw"><b>Password</b></label>
-                            <input type="password" placeholder="Enter Password" name="psw" required/>
-
-                            <button type="submit">Login</button>
-                            <label>
-                            <input type="checkbox" checked="checked" name="remember"/> Remember me
-                            </label>
+                        <div className="card">
+                            <h1>Sign in</h1>
+                            <main id="container">
+                                <form className="input">
+                                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Username"/>
+                                    <input type="password" class="form-control" id="exampleInputEmail1" placeholder="Password"/>
+                                    <Button bsStyle="warning">Login</Button>
+                                    Do you not have user at the Holon?<a href="#"> Do your login here</a>
+                                </form>
+                            </main>
                         </div>
-
-                        <div className="container" >
-                            <button type="button" className="cancelbtn">Cancel</button>
-                            <span className="psw">Forgot <a href="#">password?</a></span>
-                        </div>
-                        </form>
                     </Col>
                 </Row>
             </Grid>
