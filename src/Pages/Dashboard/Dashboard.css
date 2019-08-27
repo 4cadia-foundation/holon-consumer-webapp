@@ -1,11 +1,8 @@
 * {
     background-color: #fff;
-    margin: 0;
-    padding: 0;
-  
 }
 .menu-fix{
-    background-color: #00008B;
+    background-color: #111;
     display: flex;
     flex-direction: column;
     position: fixed;
@@ -16,17 +13,20 @@
 }
 h1 {
     font-size: 20px;
-    background-color: #00008B;
+    background-color: #111;
     margin-right: 100px;
     color: #fff;
     margin-top: 30px;
 }
 .links-name {
-    background-color: #00008B;
+    background-color: #111;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     height: 100%;
+}
+.links-name a:hover{
+    color: #f1f1f1;
 }
 a {
     color: #fff;
@@ -38,14 +38,10 @@ a {
     margin-left: 250px;
     margin-top: 30px;
 }
-#container-dashboard {
-    margin: 0;
-    padding: 0;
-}
 p{
     font-size: 20px;
 }
-.container.row {
+.container {
     padding: 0;
     margin: 0;
 }
