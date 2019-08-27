@@ -1,11 +1,18 @@
 import React from 'react';
 import './App.css';
 import Login from './Pages/Login/Login';
+import { BrowserRouter, Switch, Route} from 'react-router-dom';
+import Dashboard from './Pages/Dashboard/Dashboard';
 
 function App() {
   return (
     <div className="App">
-      <Login />
+      <BrowserRouter>
+        <Switch>
+          <Route path="/" exact={true} component={Login} />
+          <Route path="/dashboard" exact={true} component={Dashboard} />
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 }
