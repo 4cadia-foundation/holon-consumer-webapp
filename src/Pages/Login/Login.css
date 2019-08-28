@@ -1,14 +1,15 @@
 
 .card {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
   height: 350px;
-  margin-top: 150px;
   width: 500px;
+
   background-color: #fff;
-  margin-left: 350px;
   padding: 10px;
   border-radius: 10px;
 }
+
 .formLogin {
   display: flex;
   flex-direction: column;
@@ -27,8 +28,4 @@
 #container {
   height: 100px;
   margin-top: 10px
-}
-
-h1 {
-  margin-top: 50px;
 }
