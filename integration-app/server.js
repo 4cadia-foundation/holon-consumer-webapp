@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-
+const http = require("http");
 const app = express();
 
 const corsOptions = {
@@ -17,6 +17,9 @@ app.use(bodyParser.urlencoded({ extended: false}));
 
 require('./src/controllers/integration/integration.controller')(app);
 
-app.listen(8080, () => {
-    console.log(`application start in port 8080`);
-});
+
+const server = http.createServer(app);
+
+
+server.listen(8080, () => console.log(`Listening on port 8080`));
+

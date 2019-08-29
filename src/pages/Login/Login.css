@@ -10,6 +10,13 @@
   border-radius: 10px;
 }
 
+
+.box-waitting-approval {
+  padding-top: 40px;
+  margin: 0 auto;
+  width: 60%;
+}
+
 .formLogin {
   display: flex;
   flex-direction: column;

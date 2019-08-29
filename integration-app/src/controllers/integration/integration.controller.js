@@ -15,11 +15,24 @@ router.post('/integrate', async (req, res) => {
 
         return res.status(200).send({...transactions});
 
-    }catch (exception) {
-        console.error("[integration.controller] Error: "+ exception);
+    } catch (exception) {
         return res.status(500).send(exception);
     }
 });
+
+
+router.get('/integrate/:address', async ( req, res ) => {
+    try {
+        const address = req.params.address;
+
+        const transactions = await service.fieldIsAllowed( address , "email");
+        return res.status(200).send({...transactions});
+
+    } catch (exception) {
+        console.error("[integration.controller] Error: "+ exception);
+        return res.status(500).send(exception);
+    }
+})
 
 
  module.exports = app => app.use('/api', router);
