@@ -1,11 +1,9 @@
-const Connection = require ('../connection/connection.blockchain');
-const Settings = require('../../../config/settings');
-const Config = require('../../../config/settings');
-const Contract = require('../../../config/abi');
-const ethers = require('ethers');
+import Connection from '../connection/connection.blockchain';
+import * as Settings from '../../config/settings';
+import * as Contract from '../../config/abi';
+import * as ethers from 'ethers';
 
-
-class SmartContractBlockchain {
+export class SmartContractBlockchain {
 
     constructor () {
         this._wallet = new ethers.Wallet(`${Settings.primaryKey}`, Connection.provider());
@@ -21,5 +19,3 @@ class SmartContractBlockchain {
     }
 
 }
-
-module.exports = SmartContractBlockchain;

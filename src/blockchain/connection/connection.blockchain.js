@@ -1,11 +1,9 @@
-const Settings = require('../../../config/settings');
-const ethers = require('ethers');
+import Settings from '../../config/settings';
+import * as ethers from 'ethers';
 
-class Connection {
+export default class Connection {
 
     static provider () {
         return new ethers.providers.JsonRpcProvider(`${Settings.provider}://${Settings.host}:${Settings.port}`);
     }
 }
-
-module.exports = Connection;
