@@ -1,7 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
 .app {
   text-align: center;
 }
 
+
+h1, h2, h3, h4 {
+  font-family: 'Roboto', sans-serif;
+}
 
 .app .centralized-content {
   display: -webkit-flex;
@@ -14,11 +20,17 @@
   height: 100%;
 }
 
+.logotype {
+  margin-bottom: 50px;
+}
 
-.app-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.card {
+  height: auto !important;
+}
+
+.card-body {
+  padding: 10px 10px 40px;
+  border-radius: 10px;
 }
 
 .app-header {
@@ -32,9 +44,25 @@
   color: white;
 }
 
+.btn-primary {
+   color: #1db954;
+}
+
+
 .app-link {
   color: #61dafb;
 }
+
+.logotype img {
+  height: 100px;
+}
+
+.logotype h1 {
+  font-weight: bold;
+  text-shadow: 2px 2px silver;
+}
+
+
 
 @keyframes app-logo-spin {
   from {

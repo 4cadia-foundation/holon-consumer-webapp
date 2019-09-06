@@ -22,7 +22,7 @@
   },
   "scripts": {
     "start:backend": "node ./integration-app/server.js",
-    "start:frontend": "react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "cors": "^2.8.5",

@@ -1,20 +1,32 @@
-import axios from 'axios';
+import {SmartContractBlockchain} from '../../blockchain/smartcontract/smartcontract.blockchain';
 
-class IntegrationService {
+export default class IntegrationService {
 
-    static integrateWithHollon (address) {
-        return axios.post('http://localhost:8080/api/integrate', {address: address})
-            .then( ( response ) => {
-               return response.data;
+    constructor ( ) {
+        const smartContract = new SmartContractBlockchain();
+        this._contractWithSigner = smartContract.contractWithSigner();
+    }
+
+
+    integrateWithHollon (address) {
+        return this._contractWithSigner.askDecryptedData(address, 'email')
+            .then( transaction => {
+                return transaction.wait();
+            })
+            .then( data => {
+                const { transactionHash, blockNumber } = data;
+                return {
+                    transactionHash,
+                    blockNumber
+                };
             });
     }
 
-    static authorization ( address ) {
-        return axios.get(`http://localhost:8080/api/integrate/${address}`)
-            .then( ( response ) => {
-                return response.data;
+    authorization ( address ) {
+        return this._contractWithSigner.getAllowedField(address, 'email')
+            .then( transaction => {
+                return transaction;
             });
     }
 
 }
-export default IntegrationService;
