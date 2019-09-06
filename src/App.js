@@ -28,8 +28,7 @@ function App() {
               <div className={'card-body'}>
                 <Switch>
 
-
-                  <Route path="/login" exact={ true } component={ Login } />
+                  <Route path="/" exact={ true } component={ Login } />
                   <Route path="/signup" exact={ true } component={Signup} />
                   <Route path="/permission" exact={ true } component={ Permission } />
                   <Route path="/dashboard" exact={ true } component={Dashboard} />

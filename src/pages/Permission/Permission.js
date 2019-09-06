@@ -14,7 +14,7 @@ export default class Permission extends Component {
                     <p>After approve, go to Login e access application.</p>
                     <Button onClick={ ( ) => {
                         this.props.history.push({
-                            pathname: '/login'
+                            pathname: '/'
                         });
                     }}>Login</Button>
 
