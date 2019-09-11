@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import {BrowserRouter, Route, Switch, HashRouter} from 'react-router-dom';
 import Dashboard from './pages/Dashboard/Dashboard';
 import {ToastContainer} from 'react-toastify';
 import Signup from './pages/Signup/Signup';
@@ -27,14 +27,16 @@ function App() {
               </div>
 
               <div className={'card-body'}>
-                <Switch>
+                <HashRouter>
+                  <Switch>
 
-                  <Route path="/" exact={ true } component={ Login } />
-                  <Route path="/signup" exact={ true } component={Signup} />
-                  <Route path="/permission" exact={ true } component={ Permission } />
-                  <Route path="/dashboard" exact={ true } component={Dashboard} />
+                    <Route path="/" exact={ true } component={ Login } />
+                    <Route path="/signup" exact={ true } component={Signup} />
+                    <Route path="/permission" exact={ true } component={ Permission } />
+                    <Route path="/dashboard" exact={ true } component={Dashboard} />
 
-                </Switch>
+                  </Switch>
+                </HashRouter>
               </div>
 
 
