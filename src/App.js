@@ -1,12 +1,13 @@
 import React from 'react';
-import './App.css';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import Dashboard from './pages/Dashboard/Dashboard';
 import {ToastContainer} from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import Signup from './pages/Signup/Signup';
 import Login from './pages/Login/Login';
 import Permission from './pages/Permission/Permission.js';
+import logo from '../src/logotype-sample.svg';
+import 'react-toastify/dist/ReactToastify.css';
+import './App.css';
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
           <div className="card">
 
               <div className={'logotype'}>
-                <img src={process.env.PUBLIC_URL + '/logotype-sample.svg'} alt="Logotype"/>
+              <img src={logo} alt="Logo" />
                 <h1>BLOCKCHAIN COMPANY</h1>
               </div>
 
