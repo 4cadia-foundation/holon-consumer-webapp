@@ -1,24 +1,49 @@
 import React from 'react';
-import logo from './logo.svg';
+import {BrowserRouter, Route, Switch, HashRouter} from 'react-router-dom';
+import Dashboard from './pages/Dashboard/Dashboard';
+import {ToastContainer} from 'react-toastify';
+import Signup from './pages/Signup/Signup';
+import Login from './pages/Login/Login';
+import Permission from './pages/Permission/Permission.js';
+import logo from '../src/logotype-sample.svg';
+import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+
+
+
+       <ToastContainer />
+       <BrowserRouter>
+       <div className="centralized-content">
+
+          <div className="card">
+
+              <div className={'logotype'}>
+              <img src={logo} alt="Logo" />
+                <h1>BLOCKCHAIN COMPANY</h1>
+              </div>
+
+              <div className={'card-body'}>
+                <HashRouter>
+                  <Switch>
+
+                    <Route path="/" exact={ true } component={ Login } />
+                    <Route path="/signup" exact={ true } component={Signup} />
+                    <Route path="/permission" exact={ true } component={ Permission } />
+                    <Route path="/dashboard" exact={ true } component={Dashboard} />
+
+                  </Switch>
+                </HashRouter>
+              </div>
+
+
+
+          </div>
+       </div>
+       </BrowserRouter>
     </div>
   );
 }
