@@ -21,7 +21,7 @@ The base of this extension are smart contracts, created to save and manage the u
 - I can offer or pay to customers or validators
 So that I can own a new Business Model using Holon.
 
-### Behaviour
+### Behavior
 
 Our example of usability:
 - As I am a Persona using a Login with Holon
