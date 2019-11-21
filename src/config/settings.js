@@ -3,5 +3,5 @@ module.exports = {
     provider: 'https',
     host: 'rinkeby.infura.io/v3/34cfe59bd42449e78d2fea09accea995',
     port: 0,
-    primaryKey: '0xafcde7e4ee8c0de0f7fe27c642b1e4134e5a2cd2152f085a1fccdf32eee43f39'
+    primaryKey: 'aa8a646b3bac81735b76d265383d49a59a580424baf38f2c8a9fac2c27bd94c7'
 }
