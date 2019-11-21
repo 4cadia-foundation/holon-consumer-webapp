@@ -1,7 +1,7 @@
 module.exports = {
-    ADDRESS: '0xd7BC6e6e8155D3a7Dae453705235DF96B8d7B99c',
-    provider: 'http',
-    host: 'rinkeby.caralabs.me',
-    port: 18575,
-    primaryKey: '0xafcde7e4ee8c0de0f7fe27c642b1e4134e5a2cd2152f085a1fccdf32eee43f39'
+    ADDRESS: '0x76dE4BE2c318ab20b2c23dE2674184E95e360a8A',
+    provider: 'https',
+    host: 'rinkeby.infura.io/v3/34cfe59bd42449e78d2fea09accea995',
+    port: 0,
+    primaryKey: 'aa8a646b3bac81735b76d265383d49a59a580424baf38f2c8a9fac2c27bd94c7'
 }
